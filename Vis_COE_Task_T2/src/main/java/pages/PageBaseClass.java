@@ -10,7 +10,7 @@ public class PageBaseClass {
 	 * create constructor 
 	 * */
 	public PageBaseClass(WebDriver driver) {
-		this.driver= driver;
+		//this.driver= driver;
 		PageFactory.initElements(driver, this);
 	}	
 }

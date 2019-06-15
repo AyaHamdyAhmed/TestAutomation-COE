@@ -13,18 +13,18 @@ public class Browser {
 
 	static WebDriver browserObject;
 
-	public void setBrowser(String browserName) {
+	public static void setBrowser(String browserName) {
 		if (browserName.equalsIgnoreCase("firefox")) {
-			FirefoxOptions opt = new FirefoxOptions();
-			opt.addPreference("dom.webnotifications.enabled", false);
+			//FirefoxOptions opt = new FirefoxOptions();
+			//opt.addPreference("dom.webnotifications.enabled", false);
 			System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver.exe");
-			browserObject = new FirefoxDriver(opt);
+			browserObject = new FirefoxDriver();
 
 		} else if (browserName.equalsIgnoreCase("chrome")) {
-			ChromeOptions ops = new ChromeOptions();
-			ops.addArguments("--disable-notifications");
+			//ChromeOptions ops = new ChromeOptions();
+			//ops.addArguments("--disable-notifications");
 			System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
-			browserObject = new ChromeDriver(ops);
+			browserObject = new ChromeDriver();
 		} else if(browserName.equalsIgnoreCase("ie")){
 			//set path to IE.exe
 			System.setProperty("webdriver.ie.driver","src/test/resources/drivers/IEDriverServer.exe");
@@ -36,16 +36,16 @@ else{
 	try {
 		throw new Exception("Browser is not correct");
 	} catch (Exception e) {
-		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
 }
 
 		browserObject.manage().window().maximize();
-		browserObject.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		browserObject.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
 	}
 
 	public static WebDriver getBrowser() {
+		System.out.println("getbrwoserrrrrrrrrrrrrrrrrrrrr");
 		return browserObject;
 	}
 }

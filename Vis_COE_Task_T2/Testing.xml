@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="EshopTestSuite" thread-count="3" parallel="tests" >
+<suite name="EshopTestSuite" thread-count="3" parallel="tests">
 
-<test name="ChromeTest">
+	<test name="ChromeTest">
 
-<parameter name="browser" value="Chrome" />
+		<parameter name="browser" value="Chrome" />
 
-<classes>
+		<classes>
 
-<class name="test.EshopHomeTest">
+			<class name="test.EshopHomeTest">
 
-</class>
+			</class>
 
-</classes>
+		</classes>
 
-</test>
+	</test>
 
-<test name="FirefoxTest">
+	<test name="FirefoxTest">
 
-<parameter name="browser" value="Firefox" />
+		<parameter name="browser" value="Firefox" />
 
-<classes>
+		<classes>
 
-<class name="test.EshopHomeTest">
+			<class name="test.EshopHomeTest">
 
-</class>
+			</class>
 
-</classes>
+		</classes>
 
-</test>
+	</test>
 
-<test name="IETest">
+	<test name="IETest">
 
-<parameter name="browser" value="ie" />
+		<parameter name="browser" value="ie" />
 
-<classes>
+		<classes>
 
-<class name="test.EshopHomeTest">
+			<class name="test.EshopHomeTest">
 
-</class>
+			</class>
 
-</classes>
+		</classes>
 
-</test>
+	</test>
 
 </suite>
